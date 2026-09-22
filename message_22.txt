@@ -1,36 +1,7 @@
---[[
-    SOLO HUB — Key System
-    ---------------------------------------------------------------
-    Loader UI that gates SoloHub.lua behind a Disacord-obtained key.
-
-    HOW THE KEY WORKS
-      The key is derived from today's UTC date + your private SALT.
-      Nobody can guess it without the SALT, and it rotates at 00:00 UTC
-      so people have to come back to the server every day.
-
-      To get today's key to post in Discord, run this in any executor:
-
-          local L = loadstring(game:HttpGet("<raw url of this file>"))
-          -- or just read the printed key:
-          -- the loader prints today's key to console when
-          -- _G.SOLO_KEY_DEBUG = true is set BEFORE loading.
-
-      Easiest: set _G.SOLO_KEY_DEBUG = true, run the script, and the
-      key appears in your executor console. Post that in #keys.
-
-    SETUP
-      1. Change SALT below to something only you know.
-      2. Put your loadstring for SoloHub.lua in HUB_URL.
-      3. Upload and share. Done.
---]]
-
-----------------------------------------------------------------------
--- CONFIG
-----------------------------------------------------------------------
 local CONFIG = {
     Brand        = "SOLO HUB",
     Tagline      = "Key required — grab yours in the Discord",
-    Discord      = "https://discord.gg/Xbg8dHvRg",
+    Discord      = "https://discord.gg/solohub",
 
     -- The script that runs once the key is accepted.
     HUB_URL      = "https://raw.githubusercontent.com/YOURNAME/YOURREPO/main/SoloHub.lua",
